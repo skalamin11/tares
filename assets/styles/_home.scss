@@ -1,0 +1,956 @@
+/*======================
+ MENU AREA DESGN
+ =======================*/
+header{
+    background-color: $light-pink;
+    padding: 20px 0;
+    z-index: 9999;
+    transition: .3s;
+    .row{
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        .col{
+            align-self: center;
+        }
+    }
+    .menu-area{
+        display: flex;
+        nav{
+            align-self: center;
+            ul li{
+                display: inline-block;
+                a{
+                    padding: 12px;
+                    color: $black;
+                    &:hover{
+                        color: $red;
+                    }
+                }
+            }
+        }
+        .header-btn{
+            margin-left: 15px;
+        }
+    }
+    /* MOBILE MENU AREA*/ 
+    .mobile-menu{
+        display: none;
+        span i{
+            font-size: 25px;
+            color: $black;
+            transition: .5s;
+            cursor: pointer;
+            &:hover{
+                color: $red;
+            }
+        }
+        .mobile-menu-overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height:100%;
+            background-color:$black;
+            overflow: hidden;
+            box-sizing: border-box;
+            z-index: 99;
+            transition: .2s;
+            .close-btn{
+                text-align: right;
+                margin: 40px;
+                i{
+                    color: $white;
+                    font-size: 25px;
+                }
+            }
+            .mobile-menu-items{
+                display: grid;
+                grid-template-columns: auto;
+                row-gap: 20px;
+                text-align: center;
+                margin-top: 100px;
+                a{
+                    padding: 10x;
+                    color: $white;
+                    transition: .5s;
+                    &:hover{
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+}
+/*=====================
+STICKY MENU DESIGN
+=======================*/
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    box-shadow: 0 0 10px 0 rgb(80, 80, 80) ; 
+}
+
+/*=====================
+SLIDER SECTION DESING
+=======================*/
+
+.slider-section{
+    background: $light-pink;
+    height: 740px;
+    display: flex;
+    align-self: center;
+    .col{
+        display: grid;
+        grid-template-columns: 65% auto;
+        align-items: center;
+        .slider-content{
+            h1{
+                padding-bottom: 20px;
+            }
+            h2{
+                font-size: 65px;
+            }
+            p{
+                padding: 20px 60px 20px 0;;
+            }
+            .slider-btn-area{
+                display: flex;
+                column-gap: 15px;
+                .read-more-btn a:hover{
+                    background-color: $black;
+                }
+                .video-btn a{
+                    color: $black;
+                    display: flex;
+                    align-items: center;
+                    i{
+                        color: $red;
+                        font-size: 40px;
+                        padding-right: 15px;
+                    }
+                    &:hover{
+                        color: $red;
+                    }
+                }
+            }
+        }
+        .slider-thumb img{
+            width: 100%;
+            transform: scale(1.5);
+        }
+    }
+}
+
+/*======================
+ FEATURES AREA DESIGN 
+ ======================*/
+.features-area{
+    background: $light-pink;
+    .row{
+        padding: 0;
+        .col{
+            padding-bottom:0 ;
+            .features{
+                display: flex;
+                column-gap: 30px;
+                .features-item{
+                    background: $white;
+                    box-shadow: 0 0 15px 0 #0000004d;
+                    position: relative;
+                    overflow: hidden;
+                    .features-thumb{
+                        opacity: 0;
+                        transition: .5s;
+                        position: relative;
+                        &::before{
+                            position:absolute;
+                            content: '';
+                            width: 100%;
+                            height: 100%;
+                            background: #3333339c;
+                        }
+                    }
+                    .features-tag{
+                        position: absolute;
+                        top: 30px;
+                        left: 30px;
+                        span{
+                            background: $red;
+                            padding: 10px 20px;
+                            color: $white;
+                            transition: .5s;
+                        }
+                    }
+                    .features-title{
+                        position: absolute;
+                        bottom: 30px;
+                        left: 30px;
+                        h3{
+                            transition: .5s;
+                        }
+                    }
+                    &:hover{
+                        .features-thumb{
+                            opacity: 1;
+                            transform: scale(1.3);
+                        }
+                        .features-tag span{
+                            background: $white;
+                            color: $red;
+                        }
+                        .features-title h3{
+                            color: $white;
+                        }
+        
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*========================
+ABOUT AREA DESIGN
+========================*/
+.about-area{
+    .row{
+        padding: 100px 0;
+        .col{
+           display: grid;
+           grid-template-columns: repeat(2,1fr);
+           column-gap: 20px;
+           align-items: center;
+           .about-image{
+               position: relative;
+               img{
+                   width: 100%;
+               }
+               .about-play-icon{
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: $white;
+                border: 10px solid #E6B6A9;
+                border-radius: 50%;
+                   i{
+                    font-size: 60px;
+                    color: $red;
+                   }
+               }
+           }
+           .about-content{
+               h2{
+                   padding-bottom: 20px;
+               }
+               .about-single{
+                    display: grid;
+                    grid-template-columns: 40px auto;
+                    padding: 20px 0;
+                    i{
+                        font-size: 20px;
+                        color: $black;
+                    }
+                    .about-single-text{
+                        p{
+                            margin: 0;
+                            width: 80%;
+                        }
+                    }
+               }
+           }
+        }
+    }
+}
+/*=======================
+BRAND LOGO AREA DESING
+=======================*/
+.brand-logo-area{
+    background-color: $black;
+    .row{
+        padding:80px 0;
+        .brand-logo{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            column-gap: 20px;
+            img{
+                padding:10px 15px;
+                width: 100%;
+            }
+        }
+    }
+}
+/* =================
+SERVICES AREA DESIGN
+====================*/
+.services-area{
+    .all-services{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px;
+        .single-service{
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0px 0px 40px 0px rgba(0,0,0, .08);
+            position: relative;
+            &::before{
+                position: absolute;
+                content: '';
+                background-color: $red;
+                left: 0;
+                bottom: 0;
+                height: 70px;
+                width: 3px;
+                opacity: 0;
+                transition: .3s;
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                background-color: $red;
+                right: 0;
+                top: 0;
+                height: 70px;
+                width: 3px;
+                opacity: 0;
+                transition: .3s;
+            }
+            &:hover::before{
+                bottom:30px;
+                opacity: 1;
+            }
+            &:hover::after{
+                top:30px;
+                opacity: 1;
+            }
+            &:hover .icon i{
+                color: $red;
+            }
+            .icon i{
+                font-size: 50px;
+                padding-bottom: 15px;
+                color: $black;
+                transition: .3s;
+            }
+            .service-content{
+                h4{
+                    font-size: 22px;
+                    padding: 15px 0;
+                }
+                p{
+                    list-style: 1.5;
+                }
+            }
+        }
+    }
+}
+/*====================
+TEAM MEMBER AREA DESIGN
+=====================*/
+.team-area{
+    background-color: $light-pink;
+    .team-members{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        column-gap: 30px;
+        padding-bottom: 60px;
+        .team-single{
+            position: relative;
+            &:hover .member-info{
+                margin-top: -85px;
+                opacity: 1;
+            }
+            img{
+                width: 100%;
+            }
+            .member-info{
+                background-color: $white;
+                text-align: center;
+                padding:30px 20px;
+                margin: 0 25px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                transition: .3s;
+                .member-name a{
+                    color: $black;
+                    font-size: 24px;
+                    &:hover{
+                        color: $red;
+                    }
+                }
+                .member-title{
+                    color: $black;
+                    padding: 15px;
+                }
+                .member-social a i{
+                    background-color: $black;
+                    color: $white;
+                    font: 18px;
+                    height: 30px;
+                    width: 30px;
+                    text-align: center;
+                    line-height: 31px;
+                    margin: 0 5px;
+                    transition: .3s;
+                    &:hover{
+                        background-color: $red;
+                    }
+                }
+            }
+        }
+    }
+}
+/*====================
+PORTFOLIO AREA DESIGN
+====================*/
+.portfolio-area{
+    .portfolio{
+        .portfolio-menu{
+            padding: 30px 0;
+            ul{
+                text-align: center;
+                li{
+                    display: inline-block;
+                    padding: 15px 25px;
+                    clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+                    margin: 0 10px;
+                    font-size: 18px;
+                    cursor: pointer;
+                    &:hover, &.active{
+                        color:$white;
+                        background-color: $red;
+                    }
+                }
+            }
+        }
+        .portfolio-items{
+            .single-portfolio{
+                position: relative;
+                overflow: hidden;
+                margin: 1%;
+                width: 31.333%;
+                .single-portfolio-thumb{
+                    img{
+                        transition: .5s;
+                        object-fit: fill;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                .single-portfolio-icon{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    opacity:0 ;
+                    transition: .5s;
+                    a{
+                        background-color: $red;
+                        padding: 25px;
+                        i{
+                            font-size: 30px;
+                            color: $white;
+                            transform: translate(0, 7px);
+                        }
+                    }
+                }
+                &:hover{
+                    .single-portfolio-thumb img{
+                        transform: scale(1.2);
+                    }
+                    .single-portfolio-icon{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+/*===================
+PLACES AREA DESIGN
+====================*/
+.places-area{
+    position: relative;
+    .google-maps{
+        z-index: 99;
+        iframe{
+            width: 100%;
+            height: 630px;
+        }
+        
+    }
+    .container{
+        .row,.col{
+            display: inline-block;
+        }
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        .address-details{
+            background-color: $white;
+            width: 330px;
+            padding: 50px 30px;
+            display: inline-block;
+            .address, .phone, .mail{
+                display: grid;
+                grid-template-columns: 55px auto;
+                padding: 15px;
+                .icon i{
+                    font-size: 30px;
+                    color: $black;
+                    &:hover{
+                        color: $red;
+                    }
+                }
+                .details{
+                    h2{
+                        font-size:22px;
+                        padding-bottom: 10px;
+                    }
+                    span{
+                        line-height: 1.5;
+                    }
+                }
+                h2,i{
+                    transition:.5s;
+                }
+                &:hover h2{
+                    color: $red;
+                }
+            }
+        }
+    }
+    
+}
+/*===================
+TESTIMONIAL AREA DESIGN
+====================*/
+.testimonial-area .testimonials{
+    .single-testimonial{
+        box-shadow: 0 0 15px 0 #00000014;
+        padding: 40px;
+        margin: 15px;
+        .client-info{
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            .client-img{
+                padding-right:10px ;
+                img{
+                    width: 100%;
+                }
+            }
+            .client-name-title{
+                align-self: center;
+                p{
+                    color: $red;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+/*=======================
+BLOG AREA DESIGN
+======================*/
+.blog-area{
+    background-color: #EDF3FB;
+    .all-blogs{
+        .single-blog{
+            background-color: $white;
+            margin-right: 20px;
+            .single-blog-image{
+                height: 300px;
+                width: auto;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: .5s;
+                }
+            }
+            .single-blog-text{
+                padding: 30px;
+                .single-blog-meta a{
+                    color: $text-color;
+                    margin-right: 20px;
+                    i{
+                        color: $red;
+                        margin-right: 10px;
+                    }
+                }
+                .single-blog-content{
+                    .single-blog-title a{
+                        h2{
+                            font-size: 22px;
+                            line-height: 26px;
+                            margin: 20px 0;
+                            transition: .5s;
+                        }
+                        &:hover h2{
+                            color: $red;
+                        }
+                    }
+                    .single-blog-btn a{
+                        font-size: 18px;
+                        color: $black;
+                        transition: .5s;
+                        i{
+                            color: $red;
+                            margin-left: -20px;
+                            opacity: 0;
+                            transition: .5s;
+                        }
+                        &:hover{
+                            color: $red;
+                            i{
+                                margin-left: 0;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover .single-blog-image img{
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+/*======================
+BOTTOM TO TOP BUTTON DESIGN
+=========================*/
+.bottom-to-top{
+    position: fixed;
+    bottom: 7%;
+    right: 5%;
+    i{
+        height: 30px;
+        width: 30px;
+        line-height:30px;
+        text-align: center;
+        background-color: $red;
+        color: $white;
+        cursor: pointer;
+    }
+}
+/*=====================
+FOOTER AREA DESIGN
+=====================*/
+.footer-area{
+    background-image: url("../../img/footer/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h2,p,a, span{
+        color:$white;
+    }
+    .row{
+        padding-bottom: 0;
+        .footer-top{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 2%;
+            margin-bottom: 70px;
+            .footer-item .footer-item-title{
+                padding-bottom: 40px;
+                h2{
+                    font-size: 22px;
+                }
+            }
+            .footer-item-content .footer-contact-inner{
+                display: grid;
+                grid-template-columns: 70px auto;
+                margin-bottom: 15px;
+                .footer-inner-icon i{
+                    background: $white;
+                    color: $red;
+                    font-size: 18px;
+                    border: 1px solid $white;
+                    border-radius: 50%;
+                    height: 42px;
+                    width: 42px;
+                    text-align: center;
+                    line-height: 42px;
+                    transition: .5s;
+                }
+                .footer-inner-info{
+                    align-self: center;
+                }
+
+                &:hover .footer-inner-icon i{
+                    background: $red;
+                    color: $white;
+                    font-size: 18px;
+                    border: 1px solid $white;
+                }
+            }
+            .about-us-items{
+                list-style-type: disc;
+                color: $white;
+                margin-left: 13px;
+                li{
+                    margin-bottom: 15px;
+                    a{
+                        transition: .5s;
+                        &:hover{
+                            color: $red;
+                        }
+                    }
+                }
+            }
+            .newslatter-form form{
+                input{
+                    width: 100%;
+                    border: none;
+                    padding: 15px;
+                    outline: none;
+                    margin: 10px 0;
+                    transition: .2s;
+                    &:focus{
+                        border-radius: 4px;
+                    }
+                }
+                .btn{
+                    width: 100%;
+                    font-size: 18px;
+                    text-align: center;
+                    border-radius: 0;
+                    margin: 5px 0;
+                    transition: .5s;
+                    padding: 10px;
+                    &:hover{
+                        background: $white;
+                        color: $red;
+                    }
+                }
+            }
+        }
+        .footer-bottom{
+            border-top: 1px solid $white;
+            display: grid;
+            grid-template-columns: 40% auto;
+            padding: 10px 0;
+        }
+        .footer-menu{
+            align-self: center;
+            text-align: right;
+            ul li{
+                display: inline-block;
+                margin-right: 10px;
+                a:hover{
+                    color: $red;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*========================================
+HOME PAGE RESPONSIVE AREA
+=========================================*/
+@media screen and (max-width : 1400px){
+    .slider-section .row{
+        padding:0 ;
+        .col .slider-thumb img{
+            transform: none;
+        }
+    }
+}
+@media screen and (max-width : 1200px){
+    .slider-section .col{
+        grid-template-columns: 55% auto;
+        .slider-content h2{
+            font-size: 50px;
+        }
+    }
+    .services-area .all-services {
+        grid-gap: 20px;
+    }
+    .places-area .container .col{
+        padding-left: 15%;
+    }
+    .blog-area .all-blogs .single-blog {
+        background-color: #fff;
+        margin: 0 10px;
+    }
+    .footer-area .row .footer-top {
+        grid-template-columns: 28% 15% 28% 23%;
+    }
+}
+
+@media screen and (max-width : 991px){
+   div.col{
+        padding: 2% 5%;
+    }
+    header{
+        .menu-area{
+            display: none;
+        }
+        .mobile-menu{
+            display: block;
+        }
+    }
+    .slider-section{
+        height: 550px;
+        .col{
+            display: block;
+            .slider-thumb{
+                display: none;
+            }
+        }
+    }
+    .about-area .row .col {
+        display: block;
+        .about-image{
+            padding: 0 15%;
+        }
+    }
+    .team-area .team-members {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 70px;
+    }
+    .footer-area .row .footer-top {
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 70px;
+    }
+}
+@media only screen and (max-width : 768px){
+    .slider-section .col{
+        .slider-content h2{
+            font-size: 38px;
+        }
+    }
+    .features-area .row .col .features {
+        display: block;
+        .features-item{
+            margin: 25px;
+        }
+    }
+    .brand-logo-area .row .brand-logo {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+    .services-area .all-services {
+        grid-template-columns: auto;
+    }
+    .team-area .team-members {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 80px;
+    }
+    .portfolio-area .portfolio .portfolio-items .single-portfolio {
+        width:48%;
+    }
+    .footer-area .row{
+        .footer-top {
+            column-gap: 30px;
+        }
+        .footer-bottom {
+            display: block;
+            text-align: center;
+            .footer-menu{
+                text-align: center;
+            }
+        }
+    }
+}
+@media only screen and (max-width : 480px){
+    a.btn {
+        padding: 11px 20px;
+        font-size: 16px;
+    }
+    h1.sub-heading {
+        font-size: 18px;
+    }
+    .section-title {
+        width: 95%;
+        h2{
+            font-size: 26px;
+        }
+    }
+    .slider-section {
+        height: 420px;
+        .col{
+            .slider-content h2{
+                font-size: 30px;
+            }
+            .video-btn{
+                display: none;
+            }
+        }
+    }
+    .features-area .row .col .features {
+        display: block;
+        .features-item{
+            margin: 25px 0;
+            height: 180px;
+            .features-tag {
+                left: 20px;
+            }
+            .features-title {
+                left: 20px;
+                h3{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .about-area .row .col .about-image{
+        padding: 0;
+    }
+    .portfolio-area .portfolio .portfolio-menu ul li {
+        padding: 10px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        margin: 7px;
+        font-size: 16px;
+    }
+    .places-area .container .col {
+        padding-left:5%;
+        .address-details {
+            width: 100%;
+            padding: 25px 15px;
+        }
+    }
+    .blog-area .all-blogs .single-blog {
+        margin: auto 0px;
+        .single-blog-text {
+            padding: 15px;
+            .single-blog-meta a {
+                display: block;
+                padding-top: 10px;
+            }
+        }
+    }
+    .footer-area .row .footer-top {
+        grid-template-columns: auto;
+        row-gap: 25px;
+        .footer-item{
+            margin-bottom: 0;
+            .footer-item-title{
+                padding-bottom: 20px;
+            }
+        }
+    }
+    .footer-area .row .footer-menu ul li {
+        margin:5px;
+    }
+
+}

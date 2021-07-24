@@ -1,0 +1,93 @@
+@import 'resets';
+@import 'variables';
+@import 'home';
+
+/* BASIC SETUP*/
+a:focus,
+a:link{
+    text-decoration: none;
+    transition:.5s;
+}
+ul{
+    list-style: none;
+}
+
+/* HEADINGS*/
+
+h1{
+    font-size: 20;
+}
+h2{
+    font-size: 38px;
+    font-weight: 700;
+    color:$black;
+    line-height: 1.2;
+}
+h3{
+    line-height: 1.2;
+    font-size: 20px;
+}
+/* TEXT STYLE*/
+p{
+	color: $text-color;
+    font-size: $body-text;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+.sub-heading{
+    color:$red;
+    font-size: 22px;
+}
+/* BUTTON STYLE*/
+.btn{
+    padding: 14px 33px;
+    font-size: 18px;
+    font-weight: 600;
+    color: $white;
+    background-color:$red;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+/* CONTAINER */
+.container{
+    max-width: $boxed-width;
+    width: 100%;
+    margin: auto;
+}
+.row{
+    padding: 100px 0;
+}
+.col{
+    padding: 1%;
+}
+section::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+/* REUSABLE CLASSES */
+.section-title{
+    width: 55%;
+    margin:auto;
+    text-align: center;
+    padding-bottom: 30px;
+    p{
+        margin: 20px ;
+    }
+}
+
+/* MIXIN */
+@mixin vertical-center{
+    display: flex;
+    vertical-align: middle;
+    margin: auto;
+}
+
+
+@media screen and (max-width : 768px){
+    .section-title {
+        width: 85%;
+    }
+}
